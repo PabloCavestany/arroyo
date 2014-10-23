@@ -43,7 +43,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
 DAMAGE.
 " />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>TiddlyWiki — a non-linear personal web notebook</title>
+<title>Cositas — Inicio esta wiki el 23 de Octubre del 2014</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 </head>
@@ -115,7 +115,42 @@ Error message and password prompt
 <noscript>
 <div id="splashArea">
 
-<div class=' tc-reveal' hidden='true'></div>
+<p>This <a class='tc-tiddlylink-external' href='http://tiddlywiki.com' target='_blank'>TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
+
+<li>$:/core</li>
+
+<li>$:/DefaultTiddlers</li>
+
+<li>$:/isEncrypted</li>
+
+<li>$:/SiteSubtitle</li>
+
+<li>$:/SiteTitle</li>
+
+<li>$:/state/sidebar</li>
+
+<li>$:/state/tab-1749438307</li>
+
+<li>$:/StoryList</li>
+
+<li>$:/temp/info-plugin</li>
+
+<li>$:/temp/NewTagName</li>
+
+<li>$:/themes/tiddlywiki/snowwhite</li>
+
+<li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>Índice</li>
+
+<li>Instalación</li>
+
+<li>IpCop</li>
+
+<li>Network interfaces</li>
+
+</ul>
+</p>
 
 
 
@@ -4655,8 +4690,44 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20141023214643678" modified="20141023214706379" title="$:/DefaultTiddlers">
+<pre>Índice
+</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
+</div>
+<div created="20141023214612894" modified="20141023214637818" title="$:/SiteSubtitle">
+<pre>Inicio esta wiki el 23 de Octubre del 2014</pre>
+</div>
+<div created="20141023214605307" modified="20141023214608740" title="$:/SiteTitle">
+<pre>Cositas</pre>
+</div>
+<div modified="20141023215159583" title="$:/state/sidebar">
+<pre>no</pre>
+</div>
+<div modified="20141023214716111" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
+</div>
+<div list="Instalación [[Network interfaces]] IpCop Índice" title="$:/StoryList">
+<pre></pre>
+</div>
+<div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/info/browser&quot;: {
+            &quot;title&quot;: &quot;$:/info/browser&quot;,
+            &quot;text&quot;: &quot;yes&quot;
+        },
+        &quot;$:/info/node&quot;: {
+            &quot;title&quot;: &quot;$:/info/node&quot;,
+            &quot;text&quot;: &quot;no&quot;
+        }
+    }
+}</pre>
+</div>
+<div created="20141023214742827" modified="20141023215154059" title="$:/temp/NewTagName">
+<pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="A clean theme that emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.2">
 <pre>{
@@ -4726,6 +4797,46 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20141023215120455" modified="20141023215129503" title="Índice">
+<pre>&lt;&lt;list-links &quot;[tag[Índice]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20141023215136519" modified="20141023225002165" tags="IpCop" title="Instalación">
+<pre>Sigo el [[Manual|http://www.ipcop.org/2.0.0/en/install/html/introduction.html]]
+
+Requirimientos hardware: muy poquito. Apenas 512M de disco y 64M de RAM. Está pensado para ser instaldo en máquinas viejas. Arquitectura: x86
+!Decide on your configuration
+
+*¿Qué configuración queremos? [[Network interfaces]] Y, por tanto, ¿cuántas tarjetas de red necesitamos?
+*¿Cómo nos llega la conexión a internet? Es decir, ¿cómo configuramos la red RED? 
+*Decidimos rango de IPs para nuestra red GREEN
+
+!Instalamos sistema
+
+*Instalación típica: pide tipo teclado, franja horaria, si la instalación la queremos realizar en disco o en RAM. En un último diálogo nos pregunta que si queremos utilizar algún archivo de back up (por si estamos realizando una actualización del sistema (upgrade))
+*Una vez instalado, pasamos a la configuración. 
+**Pide nombre del  equipo
+**Pide nombre de dominio. Le doy a skip. No necesitaremos, en principio un nombre de dominio para alcanzar ipcop. Además es una mala práctica
+**Configuración de la red RED:
+
+
+
+</pre>
+</div>
+<div created="20141023214730472" modified="20141023215722459" tags="Índice" title="IpCop">
+<pre>IpCop es una Distribución Linux completa. Dispone de licencia GNU General Public License.
+Veamos:
+&lt;&lt;list-links &quot;[tag[IpCop]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20141023220904262" modified="20141023221822995" tags="IpCop" title="Network interfaces">
+<pre>[[Fuente|http://www.ipcop.org/2.0.0/en/install/html/preparation-network-interfaces.html]]
+IpCop define 4 interfaces:
+
+*RED: Interfaz conectada a red insegura (internet, por ejemplo).
+*GREEN: Interfaz a nuestra red; la que pretendemos mantener segura.
+*BLUE: Interfaz opcional. Normalmente para la situar la wifi en una red diferente. Desde esta red no se tendrá acceso a la GREEN sino es vía VPN o similar
+*ORANGE: red DMZ. Para nuestro servidores accesibles desde fuera.
+[img[RedesIpCop|http://www.ipcop.org/2.0.0/en/install/images/01a-network.png]]</pre>
 </div>
 
 </div>
