@@ -43,7 +43,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
 DAMAGE.
 " />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Cositas — Inicio esta wiki el 23 de Octubre del 2014</title>
+<title>Tutoría 201415 ASIX1 — </title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 </head>
@@ -127,9 +127,7 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
-<li>$:/state/sidebar</li>
-
-<li>$:/state/tab-1749438307</li>
+<li>$:/state/showeditpreview</li>
 
 <li>$:/StoryList</li>
 
@@ -141,17 +139,11 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Draft of 'Primer Trimestre'</li>
+
 <li>Índice</li>
 
-<li>Instalación</li>
-
-<li>InstalaciónLaTeX</li>
-
-<li>IpCop</li>
-
-<li>LateX</li>
-
-<li>Network interfaces</li>
+<li>Primer Trimestre</li>
 
 </ul>
 </p>
@@ -4694,26 +4686,23 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141023214643678" modified="20141023214706379" title="$:/DefaultTiddlers">
+<div created="20141028174102822" modified="20141028174106801" title="$:/DefaultTiddlers">
 <pre>Índice
 </pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20141023214612894" modified="20141023214637818" title="$:/SiteSubtitle">
-<pre>Inicio esta wiki el 23 de Octubre del 2014</pre>
+<div created="20141028174041492" modified="20141028174050757" title="$:/SiteSubtitle">
+<pre></pre>
 </div>
-<div created="20141023214605307" modified="20141023214608740" title="$:/SiteTitle">
-<pre>Cositas</pre>
+<div created="20141028174025714" modified="20141028174058920" title="$:/SiteTitle">
+<pre>Tutoría 201415 ASIX1</pre>
 </div>
-<div modified="20141029014826428" title="$:/state/sidebar">
-<pre>no</pre>
+<div modified="20141028182737922" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div modified="20141023214716111" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
-</div>
-<div list="LateX InstalaciónLaTeX Instalación Índice" title="$:/StoryList">
+<div list="Índice [[Draft of 'Primer Trimestre']]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -4730,8 +4719,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141023214742827" modified="20141023215154059" title="$:/temp/NewTagName">
-<pre></pre>
+<div created="20141028182728213" modified="20141028182729448" title="$:/temp/NewTagName">
+<pre>Índ</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="A clean theme that emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.2">
 <pre>{
@@ -4802,81 +4791,49 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20141023215120455" modified="20141023215129503" title="Índice">
-<pre>&lt;&lt;list-links &quot;[tag[Índice]]&quot;&gt;&gt;</pre>
-</div>
-<div created="20141023215136519" modified="20141026233727362" tags="IpCop" title="Instalación">
-<pre>Sigo el [[Manual|http://www.ipcop.org/2.0.0/en/install/html/introduction.html]]
+<div created="20141028174209029" draft.of="Primer Trimestre" draft.title="Primer Trimestre" modified="20141028195105312" title="Draft of 'Primer Trimestre'">
+<pre>''Periodo 15-09 al 13-10''
 
-Requirimientos hardware: muy poquito. Apenas 512M de disco y 64M de RAM. Está pensado para ser instaldo en máquinas viejas. Arquitectura: x86
-!Decide on your configuration
+&lt;&lt;&lt;
+*Yo estoy de baja
+*Me sustituye Radha
+*Acudo el día 22 a la presentación de los alumnos: recojo datos de cada alumno, se asigna los ordenadores, explico normativa, etc.
+*Radha se encarga de ir acogiendo resto de alumnos que no acudieron a la presentación
+*Se prepara el sistema de control de asistencia (google docs)
+*Se crea carpeta compartida por todos los profesores del equipo docente
+*El alumno Ángel Isaac Herrera le comunica a Radha que abandona el curso por motivos de trabajo.
+*Radha solicita material para trabajar el idioma para la alumna Chadha Zammal (habla inglés, francés pero no español o catalan)
+''Periodo 27_10 a 2_11''
 
-*¿Qué configuración queremos? [[Network interfaces]] Y, por tanto, ¿cuántas tarjetas de red necesitamos?
-*¿Cómo nos llega la conexión a internet? Es decir, ¿cómo configuramos la red RED? 
-*Decidimos rango de IPs para nuestra red GREEN
-
-!Instalamos sistema
-
-*Instalación típica: pide tipo teclado, franja horaria, si la instalación la queremos realizar en disco o en RAM. En un último diálogo nos pregunta que si queremos utilizar algún archivo de back up (por si estamos realizando una actualización del sistema (upgrade))
-*Una vez instalado, pasamos a la configuración. 
-**Pide nombre del  equipo
-**Pide nombre de dominio. Le doy a skip. No necesitaremos, en principio un nombre de dominio para alcanzar ipcop. Además es una mala práctica
-**Configuración de la red RED:
-***Hay que seleccionar cómo será la configuración de la interfaz: dhcp, estática, modem, etc. Yo elijo dhcp
-***Tendremos que seleccionar la tarjeta sobre la que queremos instalar la configuración RED. Nos guiaremos por la MAC de la tarjeta.
-***A continuación, seleccionamos la tarjeta para la interfaz GREEN. 
-***Ahora nos pide que seleccionemos la IP de nuestra máquina IpCop en la GREEN. Aceptaremos los valores por defecto.
-***En cuanto al nombre del host para el dhcp, le daremos a &quot;saltar&quot;.
-***Tampoco activaremos el servidor de DHCP
-***Pide contraseñas (yo utilizo qwert12345). Se crean los usuarios &quot;root&quot;, &quot;admin&quot; y &quot;backup&quot;
-
-
-
+&lt;&lt;&lt;
+*Se incorpora alumno:
+**José Manuel Vásquez
+**Escribo a ED para avisar
+**Escribo coordinador moodle para darlo de alta
+**Se le asigna ordenador y se le añade en las listas asistencia
+**Realiza el RegistreDInici (datos)
+*Actualizo lista de matrícula (solicito datos a secretaria). Lo cuelgo en la carpeta del curso.
+*Tutoria: junto a varios alumnos ordenamos y etiquetamos los pcs y su ubicación en el armario de clase.
+&lt;&lt;&lt;
 </pre>
 </div>
-<div created="20141029020745692" modified="20141029020747469" title="InstalaciónLaTeX">
-<pre>*Harto ya de libreoffice me decido a instalar LateX. Harto!!!
-*Para la instalación en Arch, sigo [[esto|https://en.wikibooks.org/wiki/LaTeX/Installation#Custom_installation_with_TeX_Live]]
-*Los pasos son:
-**Descargar [[esto|mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz]]
-**Descomprimir como root
-**Ejecutar el install: `$./install-tl`
-**Aparece todo un menú de opciones. Paso de todo e instalo sin contemplaciones.
-**Al final de la instalación debo añadir varias rutas al PATH y al INFOPATH. Para ello edit ~/.bashrc y añado:
-```
-export PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2013/texmf-dist/doc/info:$INFOPATH
-```
-*Todo funciona correctamente.Realizo el test:
-```
-$ tex '\empty Hello world!\bye'
-$ pdftex '\empty Hello world!\bye'
-```
-*Y todo bien.
-*Para manejar toda esta suite existe la herramienta `tlmgr`. Podemos acceder ayuda vía man o vía `tlmgr help`
-*Ahora hay que instalar LaTeX. Sigo instrucciones: `tlmgr install latex latex-bin latexconfig latex-fonts` ...etc.
-ESTE ÚLTIMO PASO FALLA....</pre>
+<div created="20141028174116550" modified="20141028174142308" title="Índice">
+<pre>[[Primer Trimestre]]</pre>
 </div>
-<div created="20141023214730472" modified="20141023215722459" tags="Índice" title="IpCop">
-<pre>IpCop es una Distribución Linux completa. Dispone de licencia GNU General Public License.
-Veamos:
-&lt;&lt;list-links &quot;[tag[IpCop]]&quot;&gt;&gt;</pre>
-</div>
-<div created="20141029011120039" modified="20141029020808431" tags="Índice" title="LateX">
-<pre>[[InstalaciónLaTeX]]
+<div created="20141028174209029" modified="20141028183440266" title="Primer Trimestre">
+<pre>''Periodo 15-09 al 13-10''
 
-[[LateX: primeros pasos]]</pre>
-</div>
-<div created="20141023220904262" modified="20141023221822995" tags="IpCop" title="Network interfaces">
-<pre>[[Fuente|http://www.ipcop.org/2.0.0/en/install/html/preparation-network-interfaces.html]]
-IpCop define 4 interfaces:
+&lt;&lt;&lt;
+*Yo estoy de baja
+*Me sustituye Radha
+*Acudo el día 22 a la presentación de los alumnos: recojo datos de cada alumno, se asigna los ordenadores, explico normativa, etc.
+*Radha se encarga de ir acogiendo resto de alumnos que no acudieron a la presentación
+*Se prepara el sistema de control de asistencia (google docs)
+*Se crea carpeta compartida por todos los profesores del equipo docente
+*El alumno Ángel Isaac Herrera le comunica a Radha que abandona el curso por motivos de trabajo.
+*Radha solicita material para trabajar el idioma para la alumna Chadha Zammal (habla inglés, francés pero no español o catalan)
 
-*RED: Interfaz conectada a red insegura (internet, por ejemplo).
-*GREEN: Interfaz a nuestra red; la que pretendemos mantener segura.
-*BLUE: Interfaz opcional. Normalmente para la situar la wifi en una red diferente. Desde esta red no se tendrá acceso a la GREEN sino es vía VPN o similar
-*ORANGE: red DMZ. Para nuestro servidores accesibles desde fuera.
-[img[RedesIpCop|http://www.ipcop.org/2.0.0/en/install/images/01a-network.png]]</pre>
+</pre>
 </div>
 
 </div>
