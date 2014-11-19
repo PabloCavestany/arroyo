@@ -153,6 +153,8 @@ Error message and password prompt
 
 <li>Network interfaces</li>
 
+<li>Tcpdump</li>
+
 </ul>
 </p>
 
@@ -4707,13 +4709,13 @@ Error message and password prompt
 <div created="20141023214605307" modified="20141023214608740" title="$:/SiteTitle">
 <pre>Cositas</pre>
 </div>
-<div modified="20141029014826428" title="$:/state/sidebar">
+<div modified="20141119010404933" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div modified="20141023214716111" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div list="LateX InstalaciónLaTeX Instalación Índice" title="$:/StoryList">
+<div list="Tcpdump Índice" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -4877,6 +4879,61 @@ IpCop define 4 interfaces:
 *BLUE: Interfaz opcional. Normalmente para la situar la wifi en una red diferente. Desde esta red no se tendrá acceso a la GREEN sino es vía VPN o similar
 *ORANGE: red DMZ. Para nuestro servidores accesibles desde fuera.
 [img[RedesIpCop|http://www.ipcop.org/2.0.0/en/install/images/01a-network.png]]</pre>
+</div>
+<div created="20141119010322591" modified="20141119015536904" tags="Índice" title="Tcpdump">
+<pre>[[Fuente|http://danielmiessler.com/study/tcpdump/]]
+
+__Opciones__
+
+*`-n` : no resuelve nombres. Muestra IPs
+*`-X`: muestra el contenido de los paquetes tanto en formato hexadecimal como en ASCII
+*`-S`: muestra secuencia absoluta de los paquetes. Sirve para detectar si te están ocultando alguno.
+*`-s number`: por defecto, tcpdump solo muestra los primeros 96 bytes del paquete. Este comportamiento se puede cambiar con esta opción. Por ejemplo, `-s 0` : muestra el contenido completo del paquete.
+*`-i any`: escucha en todas las interfaces de red. 
+*`-nn`: no resuelve ni nombres ni puertos. (?)
+*`-XX`: lo mismo que con solo una X pero además muestra la cabecera ethernet
+*`-v`, `-vv`, `-vvv`: aumenta información del paquete.
+*`-c number`: solo captura un número determinado de paquetes y luego se detiene.
+*`-e`: muestra la cabecera de ethernet únicamente
+*`-q`: muestra una menor información del protocolo
+*`-E`: desencripta IPSEC information proveyendo la llave adecuada.
+__Usos básicos__
+
+*`tcpdump -nS`: información básica
+*`tcpdump -nnvvS`: muestra mucha más cantidad de información
+*`tcpdump -nnvvXSs 1514`: X añade información sobre la carga útil del paquete (permite visuallizar su contenido). Lo de -s 1514 permite capturar el paquete al completo
+__Sintaxis__
+Expresiones que nos permiten escoger el tipo de tráfico que nos interesa
+
+*`tcpdump host 1.2.3.4`: para ver el tráfico en una determinada IP (puede trabajar con nombres si no utilizamos -n)
+*`tcpdump src 1.2.3.4`: escuchar solo la fuente de una conversación. Se puede utilizar del mismo modo `dst` para indicar destino
+*`tcpdump net 1.2.3.0/24`: captura paquetes de toda una red.
+*`tcpdump icmp`: para capturar icmp o tcp o udp. Se trata de la opción `proto` pero no es necesario indicarlo.
+*`tcpdump port 3389`: para escuchar solo en un determinado puerto. Se puede combinar con scr y dst: `tcpdump scr port 3389`
+*`tcpdump scr port 339 and tcp`: se puede combinar las diversas opciones
+*`tcpdump portrange 21-24`: para indicar un rango de puertos
+*`tcpdump greater 128`: filtra paquetes de mayor tamaño que 128 bytes.
+*`tcpdump  -s 1514 port 80  -w captura_file`: para enviar todos los paquetes que captura a un archivo
+*`tcpdump -r captura_file`: para leer dicho archivo. El formato es universal. Compatible con wireshark, snort y demás.
+*`and or &amp;&amp;`, `or or ||`, `not or !`: para combinar expresiones
+__Ejemplos__
+
+&lt;&lt;&lt;
+*`tcpdump -nnvvS and src 10.5.2.3 and dst port 3389`: tráfico que salga de 10.5.2.3 con destino al puerto 3389
+*`tcpdump -nvX src net 192.168.0.0/16 and dst net 10.0.0.0/8 or 172.16.0.0/16`: tráfico saliente de la red 192.168 con destino a la 10 o al 172.16
+&lt;&lt;&lt;
+__Agrupando combinaciones__
+Para agrupar filtros se utilizan la comillas simples:
+
+*`tcpdump 'scr 10.0.2.4 and (dst port 3389 or 22)’: tráfico saliente de 10.0.2.4 con destino a los puertos 3389 o 22`
+__Avanzado__
+
+Se puede utilizar tcpdump para filtra paquetes TCP según el flag que tengan activado:
+
+*` tcpdump ‘tcp[13] &amp; 8!=0‘`: mira el campo 13 de la cabecera TCP si el bit 8 está a 1 (activado). Esto significa que se trata de un paquete PSH (push). 
+--&gt; conociendo el protocolo se puede filtrar cualquier cosa...
+... mirar fuente...
+</pre>
 </div>
 
 </div>
