@@ -141,7 +141,11 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Criptografía</li>
+
 <li>Formato mensajes TCP</li>
+
+<li>Historia de la criptografía</li>
 
 <li>Índice</li>
 
@@ -155,7 +159,11 @@ Error message and password prompt
 
 <li>Network interfaces</li>
 
+<li>Sistemas de cifra con clave simétrica</li>
+
 <li>Tcpdump</li>
+
+<li>Vim</li>
 
 </ul>
 </p>
@@ -4711,13 +4719,13 @@ Error message and password prompt
 <div created="20141023214605307" modified="20141023214608740" title="$:/SiteTitle">
 <pre>Cositas</pre>
 </div>
-<div modified="20141119105911813" title="$:/state/sidebar">
+<div modified="20141127101356267" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div modified="20141023214716111" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div list="[[Formato mensajes TCP]] Índice Tcpdump" title="$:/StoryList">
+<div list="Criptografía Índice Tcpdump" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -4806,6 +4814,10 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20141127101010375" modified="20141127111858610" tags="Índice" title="Criptografía">
+<pre>#[[Historia de la criptografía]]
+#[[Sistemas de clave simétrica]]</pre>
+</div>
 <div created="20141119104823304" modified="20141119115842839" title="Formato mensajes TCP">
 <pre>[[Fuente: man tcpdump|http://www.tcpdump.org/manpages/tcpdump.1.html]]
 
@@ -4814,6 +4826,22 @@ Un paquete TCP tiene generalmente la siguiente estructura:
 `src &gt; dst: flags data-seqno ack window urgent options`
 
 *src y dst son fuente y destino. Se componen de IP y de puertos</pre>
+</div>
+<div created="20141127103330471" modified="20141127110220790" title="Historia de la criptografía">
+<pre>[[Fuente|http://www.intypedia.com/]] (Lección 1)
+
+__Técnicas de cifrado__
+
+*Técnicas de transposición: las letras intercambian su posición según un patrón. Ejemplo: escítala lacedemonia --&gt; en esparta. Se escribía el mensaje en una cinta de cuero enrollada a un bastón. Al desenrollar las letras de la cinta carecían de sentido. Había que volver a enrollar para poder leer. El diámetro del bastón era la clave.
+*Técnicas de sustitución: las letras mantienen su posición pero cambian su apariencia. Ejemplo: cifra monoalfabética o algoritmo Cesar (lo usaba el emperador): consiste en sustituir cada letra del escrito por aquella situada tres posiciones por delante en el abecedario. Así la a se sustituye por d, la b por e, la z por c, etc.
+*Criptoanálisis: la ciencia que trata de revelar los secretos de un texto cifrado sin conocer la clave
+*La criptología aparece en el califato abasí. Ejemplo: se dan cuenta que en cada lengua la frecuencia de aparición de sus letras es constante. Así, bastaba con contar el número de veces que aparece un símbolo o letra en un texto cifrado para saber cuál era la letra subyacente.
+*Sustitución utilizando métodos polifacéticos: cada vez que aparece una letra se escoge un carácter cifrado de entre un conjunto finito de ellos. Así, la 'a' se sustituirá en su primera aparición por, pongamos, la 'x'. En la segunda, por el 10. Etc. Todo esto siguiendo un patrón claro que permita descifrar sin ambigüedades.
+__Siglo XX__
+
+*Durante siglos anteriores la criptografia tenía bastante importancia pero con la llegada de las máquinas en el siglo XX la cosa se pone al rojo vivo
+*La máquina mítica Enigma patentada por A. Scherbius en 1918 y adoptada por el ejército alemán en el 23... Hubo miles en la Segunda Guerra...
+</pre>
 </div>
 <div created="20141023215120455" modified="20141023215129503" title="Índice">
 <pre>&lt;&lt;list-links &quot;[tag[Índice]]&quot;&gt;&gt;</pre>
@@ -4891,8 +4919,28 @@ IpCop define 4 interfaces:
 *ORANGE: red DMZ. Para nuestro servidores accesibles desde fuera.
 [img[RedesIpCop|http://www.ipcop.org/2.0.0/en/install/images/01a-network.png]]</pre>
 </div>
-<div created="20141119010322591" modified="20141119015536904" tags="Índice" title="Tcpdump">
-<pre>[[Fuente|http://danielmiessler.com/study/tcpdump/]]
+<div created="20141127101430422" modified="20141127111839187" title="Sistemas de cifra con clave simétrica">
+<pre>[[Fuente|http://www.intypedia.com/]]  (Lección 2)
+
+*Situación: tengo una carta y se la quiero hacer llegar a un amigo sin que nadie la mire. ¿qué puedo hacer?
+*Solución: la metemos en una caja con candado con combinación. Solo el que conozca la combinación podrá abrirla. 
+*Pero, ¿qué pasa si probamos todas las combinaciones?
+*Improbable. Si la combinación tiene 8 dígitos, existen 10 elevado a 8 combinaciones posibles. Eso son 100.000.000. Si tardamos 10 segundos en probar cada combinación, nos llevaría 30años. Por probabilidad, necesitamos probar la mitad de las combinaciones --&gt; 15años de media en conseguir la combinación. Parece seguro
+*LA CRIPTOGRAFÍA es el equivalente al candado y su combinación. 
+''Para cifrar grandes cantidades de datos se utiliza un algoritmo de cifrado que se llama algoritmo de clave secreta o simétrico''
+
+*Se llama simétrico porque utiliza la misma clave para cifrar como para descifrar.
+*¿De qué depende que un documento cifrado pueda o no ser descifrado sin la clave? Dos factores:
+**''Robustez del algoritmo'': si utilizan técnicas de sustitución y transposición repetidamente sobre el mismo mensaje el sistema será más robusto. Ejemplo el AES o el Triple  DES utilizan multiples vueltas de cifrado en las que combinan ambas técnicas. Con ello se consigue el &quot;gran objetivo&quot;: el texto tenga una apariencia completamente aleatoria, es decir, máxima difusión y confusión. Las técnicas de transposición y de sustitución distribuyen o difunden los símbolos, estadísticamente hablando. La confusión busca ocultar la relación entre la clave y el texto
+**''La longitud de la clave'': Principio de kerckhoffs: la seguridad del sistema debe recaer en la seguridad de la clave. Ya que, como dijo Claude Shannon: &quot; el adversario conoce el sistema&quot;. Ante ataques de fuerza bruta la longitud es fundamental. Ejemplo: el algoritmo de DES (1976) con 56 digitos. En 1998 se diseño un dispositivo capaz de obtener la clave en 56horas.  Hoy en día se estima que una longitud de 128bits garantizará la seguridad bastantes años. En el estándar AES se permite elegir la longitud de la clave
+
+__Problema de la distribución de clave__
+*¿Cómo le envío a mi amigo la clave? Problemón mal resuelto hasta:
+*Solución: criptografía de clave pública</pre>
+</div>
+<div created="20141119010322591" modified="20141127100953006" tags="Índice" title="Tcpdump">
+<pre>[[Fuente|http://danielmiessler.com/study/tcpdump/]]: bastante mala
+[[Fuente2|http://www.hackplayers.com/2013/12/que-deberiamos-saber-sobre-tcpdump-1.html]]
 
 __Opciones__
 
@@ -4908,6 +4956,8 @@ __Opciones__
 *`-e`: muestra la cabecera de ethernet únicamente
 *`-q`: muestra una menor información del protocolo
 *`-E`: desencripta IPSEC information proveyendo la llave adecuada.
+*`-A`: interpreta datos capturados en codigo ASCII
+
 __Usos básicos__
 
 *`tcpdump -nS`: información básica
@@ -4944,6 +4994,24 @@ Se puede utilizar tcpdump para filtra paquetes TCP según el flag que tengan act
 *` tcpdump ‘tcp[13] &amp; 8!=0‘`: mira el campo 13 de la cabecera TCP si el bit 8 está a 1 (activado). Esto significa que se trata de un paquete PSH (push). 
 --&gt; conociendo el protocolo se puede filtrar cualquier cosa...
 ... mirar fuente...
+*`tcpdump -i lo -n -t -l -A -s0 &gt; captura.txt`:
+**-i lo: escucha en la interfaz local
+**-n: no resuelve nombres (indica IPs)
+**-t: no muestra la hora (más claro)
+**-l: ??
+**-A: visualiza el paquete en modo ASCII
+**-s0: por defecto tcpdumd solo captura los primeros 68bytes del paquete. Con s0 le indicamos que lo muestre entero (todo el paquete)
+**Lo redirijo a un archivo porque la opción -w archivo no he conseguido hacerla funcionar correctamente (?)
+</pre>
+</div>
+<div created="20141123231924377" modified="20141124000130597" tags="Índice" title="Vim">
+<pre>[img[Reference card|VIM\ Quick\ Reference\ Card]]
+
+__Buscar__
+
+*Para buscar un texto, escribimos (en modo normal, pulsando antes ESC si estamos en modo edición) la secuencia `/palabra`. Veremos que se resalta la palabra encontrada (o nos avisa de que no existe). 
+*Podemos seguir buscando la próxima coincidencia pulsando n o buscarla hacia detrás pulsando N.
+*Para sustituir un texto debemos escribir la secuencia `:%s/texto1/texto2/g`, donde texto1 es el texto a buscar y texto2 el texto que será reemplazado. Si incluimos la g final (global), sustituirá todas las coincidencias que encuentre, sino sólo la primera que encuentre.
 </pre>
 </div>
 
